@@ -26,7 +26,7 @@ spec:
               fieldRef:
                 fieldPath: metadata.namespace
           - name: SERVICE_X
-            value: $(NS).svc.cluster.local
+            value: "$(NS).svc.cluster.local"
           - name: SERVICE_X_PORT
             value: 6000
         ports:
@@ -71,9 +71,7 @@ spec:
           requests:
             cpu: 500m
             memory: 512m
-
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
