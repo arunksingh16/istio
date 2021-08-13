@@ -26,7 +26,7 @@ spec:
               fieldRef:
                 fieldPath: metadata.namespace
           - name: SERVICE_X
-            value: "$(nspace).svc.cluster.local"
+            value: "flaskbackend.$(nspace).svc.cluster.local"
           - name: SERVICE_X_PORT
             value: "6000"
         ports:
@@ -74,7 +74,9 @@ spec:
       targetPort: 5000
   selector:
     app: flaskfrontend
+
 ---
+
 apiVersion: v1
 kind: Service
 metadata:
@@ -90,4 +92,3 @@ spec:
       targetPort: 6000
   selector:
     app: flaskbackend
-
