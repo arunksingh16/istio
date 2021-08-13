@@ -28,16 +28,9 @@ spec:
           - name: SERVICE_X
             value: "$(nspace).svc.cluster.local"
           - name: SERVICE_X_PORT
-            value: 6000
+            value: "6000"
         ports:
         - containerPort: 5000
-        resources:
-          limits:
-            cpu: 500m
-            memory: 512m
-          requests:
-            cpu: 500m
-            memory: 512m
 ---
 
 apiVersion: apps/v1
@@ -64,13 +57,7 @@ spec:
         imagePullPolicy: "Always"
         ports:
         - containerPort: 6000
-        resources:
-          limits:
-            cpu: 500m
-            memory: 512m
-          requests:
-            cpu: 500m
-            memory: 512m
+
 ---
 apiVersion: v1
 kind: Service
