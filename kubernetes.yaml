@@ -4,6 +4,7 @@ metadata:
   name: flaskfrontend
   labels:
     app: flaskfrontend
+    version: v1
 spec:
   replicas: 1
   strategy:
@@ -11,10 +12,12 @@ spec:
   selector:
     matchLabels:
       app: flaskfrontend
+      version: v1
   template:
     metadata:
       labels:
         app: flaskfrontend
+        version: v1
     spec:
       containers:
       - name: flaskfrontend
@@ -39,6 +42,7 @@ metadata:
   name: flaskbackend
   labels:
     app: flaskbackend
+    version: v1
 spec:
   replicas: 1
   strategy:
@@ -46,10 +50,12 @@ spec:
   selector:
     matchLabels:
       app: flaskbackend
+      version: v1
   template:
     metadata:
       labels:
         app: flaskbackend
+        version: v1
     spec:
       containers:
       - name: flaskbackend
@@ -74,6 +80,7 @@ spec:
       targetPort: 5000
   selector:
     app: flaskfrontend
+    version: v1
 
 ---
 
@@ -92,3 +99,4 @@ spec:
       targetPort: 6000
   selector:
     app: flaskbackend
+    version: v1
