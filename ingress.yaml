@@ -1,30 +1,35 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  name: hello-gateway
+  name: flask-gateway
 spec:
   selector:
-    istio: ingressgateway # use the default IngressGateway
+    istio: ingressgateway # use Istio default gateway implementation
   servers:
   - port:
       number: 80
       name: http
       protocol: HTTP
     hosts:
-    - "master.com"
+    - "flask.example.com"
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: frontend-ingress
+  name: flaskvirtualservice
 spec:
   hosts:
-  - "master.com"
+  - "flask.example.com"
   gateways:
-  - hello-gateway
+  - flask-gateway
   http:
-  - route:
+  - match:
+    - uri:
+        prefix: /list
+    - uri:
+        prefix: /
+    route:
     - destination:
-        host: flaskbackend.default.svc.cluster.local
         port:
-          number: 6000
+          number: 5000
+        host: flaskfrontend.default.svc.cluster.local
