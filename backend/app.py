@@ -13,21 +13,38 @@ books = [
      'title': 'The Ones Who Walk Away From Omelas',
      'author': 'Ursula K. Le Guin',
      'first_sentence': 'With a clamor of bells that set the swallows soaring, the Festival of Summer came to the city Omelas, bright-towered by the sea.',
-     'published': '1973'},
+     'year_published': '1973'},
     {'id': 2,
      'title': 'Dhalgren',
      'author': 'Samuel R. Delany',
      'first_sentence': 'to wound the autumnal city.',
-     'published': '1975'}
+     'year_published': '1975'}
+]
+
+
+car = [
+    {'id': 0,
+     'name': 'Arun',
+     'car': 'Audi',
+     'color': 'Blue',
+     'bought': '2021'},
+    {'id': 1,
+     'name': 'Tipsy',
+     'car': 'BMW',
+     'color': 'Red',
+     'bought': '2022'},
+    {'id': 2,
+     'name': 'Sam',
+     'car': 'Merc',
+     'color': 'Blue',
+     'bought': '2030'
+     }
+     
 ]
 
 @app.route('/api/v1/resources/users/all')
 def ws():
-    return jsonify(
-        username="ws",
-        email="arun@dummy.com",
-        id="1"
-    )
+    return jsonify(car)
 
 
 @app.route('/api/v1/resources/books/all', methods=['GET'])

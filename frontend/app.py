@@ -14,6 +14,7 @@ SERVICE_X_PORT = os.getenv("SERVICE_X_PORT", "6000")
 
 
 @app.route('/')
+@app.route('/home')
 def home_page():
     return render_template('index.html')
 
@@ -37,11 +38,11 @@ def ws_page():
 
     except HTTPError as http_err:
         print(f'HTTP error occurred: {http_err}')
-        return "Somethig is wrong"
+        return "Somethig is wrong. You should check backend Microservice call!"
         
     except Exception as err:
         print(f'Other error occurred: {err}')
-        return "Somethig is wrong"
+        return "Somethig is wrong. You should check backend Microservice call!"
 
 
 if __name__ == "__main__":
