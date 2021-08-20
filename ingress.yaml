@@ -19,7 +19,7 @@ metadata:
   name: flaskvirtualservice
 spec:
   hosts:
-  - "flask.example.com"
+  - "flaskfrontend.default.svc.cluster.local"  # destination hosts to which traffic is being sent. The hosts field applies to both HTTP and TCP services
   gateways:
   - flask-gateway
   http:
