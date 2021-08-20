@@ -71,7 +71,7 @@ spec:
         prefix: /list
     - uri:
         prefix: /
-  - route:
+    route:
     - destination:
         host: flaskfrontend.default.svc.cluster.local
         subset: v1
