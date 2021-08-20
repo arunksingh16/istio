@@ -70,7 +70,7 @@ spec:
     - uri:
         prefix: /list
     - uri:
-        prefix: /
+        prefix: /home
     route:
     - destination:
         host: flaskfrontend.default.svc.cluster.local
