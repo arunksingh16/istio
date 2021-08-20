@@ -27,7 +27,7 @@ spec:
     - uri:
         prefix: /list
     - uri:
-        prefix: /
+        prefix: /home
     route:
     - destination:
         port:
