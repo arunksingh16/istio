@@ -1,5 +1,7 @@
 # istio
-Repository for Istio deployment and testing
+The repository is to support a Medium blog post on Istio. 
+
+https://arunksingh16.medium.com/istio-traffic-management-demo-using-python-flask-based-webservices-part-1-55cd9390932f
 
 Using pipenv in Mac
 ```
