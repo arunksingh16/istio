@@ -6,6 +6,7 @@ from urllib.request import urlopen
 import requests
 from requests.exceptions import HTTPError
 import json
+import logging
 
 app = Flask(__name__)
 
