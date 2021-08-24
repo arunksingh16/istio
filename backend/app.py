@@ -1,6 +1,7 @@
 from enum import unique
 from flask import Flask, jsonify, render_template, request
 import os
+import logging
 app = Flask(__name__)
 
 books = [
