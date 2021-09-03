@@ -1,7 +1,9 @@
 # istio
 The repository is to support a Medium blog post on Istio. 
 
-https://arunksingh16.medium.com/istio-traffic-management-demo-using-python-flask-based-webservices-part-1-55cd9390932f
+PART 1: https://arunksingh16.medium.com/istio-traffic-management-demo-using-python-flask-based-webservices-part-1-55cd9390932f
+
+PART 2: https://arunksingh16.medium.com/istio-canary-deployment-for-python-flask-based-webservices-2eb86c873f64
 
 Using pipenv in Mac
 ```
